@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+  <form action="/user/access" method="post">
+    <fieldset>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="">
+    </fieldset>
+    <fieldset>
+      <label for="password">Password</label>
+      <input type="text" name="password" id="password" value="">
+    </fieldset>
+    <fieldset>
+      <label for="remember">Remember</label>
+      <input type="checkbox" name="remember" id="remember">
+    </fieldset>
+    <fieldset>
+      <button type="submit"><i class="fas fa-airplane"></i></button>
+    </fieldset>
+  </form>
+</body>
+</html>

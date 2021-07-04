@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+  <form action="/user/save" method="post">
+    <fieldset>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </fieldset>
+    <fieldset>
+      <label for="password">Password</label>
+      <input type="text" name="password" id="password">
+    </fieldset>
+    <fieldset>
+      <button type="submit"><i class="fas fa-plus"></i></button>
+    </fieldset>
+  </form>
+</body>
+</html>

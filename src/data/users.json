@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name":"Eduardo",
+    "email":"ev@digitalhouse.com",
+    "admin":true,
+    "avatar": null
+  }
+]
