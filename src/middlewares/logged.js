@@ -1,7 +1,7 @@
 module.exports = (req, res, next) => {
-  if (res.locals.user.admin) {
+  if (res.locals.user) {
     return next();
-  } else if (res.locals && res.locals.user) {
+  } else{
     return res.redirect("/")
   }
 }

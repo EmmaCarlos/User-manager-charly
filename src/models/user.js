@@ -24,9 +24,9 @@ module.exports = {
 	.replace(/\s/g, "")
 	.split("@")[0]
 	.toLowerCase(),
-      email: data.email,
-      admin: data.email.include("@digitalhouse") || data.email.include("@dh") ? true: false,
-      password: bcrypt.hashSync(data.password),
+      email: String(data.email),
+      admin: String(data.email).includes("@digitalhouse") || data.email.include("@dh") ? true: false,
+      password: bcrypt.hashSync(data.password,10),
       avatar: null
     };
     users.push(newUser);
@@ -40,9 +40,9 @@ module.exports = {
 	.replace(/\s/g, "")
 	.split("@")[0]
 	.toLowerCase();
-        user.email = data.email;
-        user.admin = data.email.include("@digitalhouse") || user.data.email.include("@dh") ? true : false;
-        user.password = bcrypt.hashSync(data.password);
+        user.email = String(data.email);
+        user.admin = String(data.email).includes("@digitalhouse") || user.data.email.include("@dh") ? true : false;
+        user.password = bcrypt.hashSync(data.password,10);
         user.avatar = file ? file.filename : null;
         return user
       }

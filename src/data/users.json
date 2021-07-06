@@ -1,9 +1,10 @@
 [
   {
     "id": 1,
-    "name":"Eduardo",
-    "email":"ev@digitalhouse.com",
-    "admin":true,
+    "name": "evirgilio",
+    "email": "evirgilio@digitalhouse.com",
+    "admin": true,
+    "password": "$2b$10$uCgGP.cnH7B.nhBlWv6imeCaTU7BKhyvXAafYAykKQd8mNjVFI1Eq",
     "avatar": null
   }
 ]
