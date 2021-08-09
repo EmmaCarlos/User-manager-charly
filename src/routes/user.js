@@ -5,16 +5,9 @@ const router = express.Router();
 const controller = require("../controllers/user");
 const isLogged = require("../middlewares/logged");
 const validLogin = require("../middlewares/validLogin");
+const storage = require("../middlewares/multerMiddleware")
 const validRegister = require("../middlewares/validRegister");
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.resolve(__dirname,"../../public/images","avatar"))
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now())
-  }
-});
-let upload = multer({ storage: storage })
+const upload = multer({storage: storage("avatars")})
 
 router.get("/login",controller.login)
 router.get("/register",controller.register)

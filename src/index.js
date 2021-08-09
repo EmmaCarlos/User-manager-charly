@@ -6,8 +6,8 @@ const path = require("path");
 const app = express();
 
 // App Server
-app.set("port",process.env.PORT || 3000)
-app.listen(app.get("port"),()=> console.log("server start http:localhost:"+app.get("port")))
+app.set("port",process.env.PORT || 3001)
+app.listen(app.get("port"),()=> console.log("server start http://localhost:"+app.get("port")))
 
 // App View
 app.set("view engine","ejs");
